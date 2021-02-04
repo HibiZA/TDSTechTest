@@ -1,0 +1,28 @@
+
+    <div class="container">
+        <p style ='position: top;'>Enter your own Simple SQL Query to display data</p>
+
+        <mat-form-field appearance="fill" style="width: 600px;">
+            <mat-label></mat-label>
+            <textarea matInput #query value = 'CREATE TEMPORARY TABLE TEMP
+            SELECT km_person.person_id, km_person.person_name, km_person.department_id, km_salaries.salary 
+            FROM km_person RIGHT OUTER JOIN km_salaries ON km_person.person_id = km_salaries.person_id;
+            SELECT 
+                *
+            FROM
+                km_department,
+                (SELECT 
+                    department_id, SUM(salary) total
+                FROM
+                    TEMP
+                GROUP BY department_id) result1
+            WHERE
+                result1.department_id = km_department.department_id LIMIT 1;
+            DROP TEMPORARY TABLE TEMP;' style = 'height: 300px;'></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="databaseService.getQueryData(query.value)">Submit</button>
+        </div>
+       <div class="result-container">
+        <h2>Result:</h2>
+        <div>{{databaseService.queryData}}</div>
+    </div>

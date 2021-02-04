@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>TDS Tech Test</span>
+    <span class="spacer"></span>
+</mat-toolbar>
+
+
+<mat-drawer-container class="sidenav-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <p>
+        <button mat-flat-button aria-label="Example icon-button with menu icon" (click)='navToHome(); drawer.toggle()'>
+          <mat-icon aria-hidden="false" aria-label="Example icon-button with menu icon">home</mat-icon>
+            Home</button>
+          </p>
+        <p>
+      <button mat-flat-button aria-label="Example icon-button with menu icon" (click)='navToApiEndpoint(); drawer.toggle()'>
+        <mat-icon aria-hidden="false" aria-label="Example icon-button with menu icon">cloud_download</mat-icon>
+          API Endpoint</button>
+        </p>
+        <p>
+    <button mat-flat-button aria-label="Example icon-button with menu icon" (click)='navToDatabase(); drawer.toggle()'>
+        <mat-icon aria-hidden="false" aria-label="Example icon-button with menu icon">storage</mat-icon>
+          Database</button>
+        </p>
+    </mat-drawer>
+
+<app-api-endpoint *ngIf="toApiEndpoint"></app-api-endpoint>
+<app-database *ngIf="toDatabase"></app-database>
+
+<div *ngIf="toHome" class="container">
+  <h1 >
+    Welcome
+  </h1>
+  <h2 >
+    This is my solution to the TDS Tech Test.
+  </h2>
+  <h2 >
+    Head over to the Menu to view the solutions.
+  </h2>
+  <p >
+    The solutions are setup into different sections:
+    API Endpoint & Database.
+  </p>
+  <p>
+    Enter your Name & Surname to see the results from the API.
+  </p>
+  <p>
+    The Database default Query is the answer to question 2.
+  </p>
+  <p>
+    The Source Code is linked below:
+  </p>
+  <a href="https://www.w3schools.com">GitHub</a>
+</div>
+  
+  </mat-drawer-container>
+
+

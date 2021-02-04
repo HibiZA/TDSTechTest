@@ -1,0 +1,40 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+  .sidenav-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sidenav {
+    padding: 20px;
+  }
+  .container{
+    margin-left: 15%;
+    margin-top: 20px;
+    align-items: center;
+    align-self: center;
+  }
+  /* .welcome-text{
+    margin-left: 45%;
+    margin-top: 20px;
+
+  }
+  .h2-text{
+    margin-left: 35%;
+  }
+  .p-text{
+    margin-left: 32%;
+  }
+  .p-text2{
+    margin-left: 36%;
+  } */
