@@ -9,7 +9,7 @@ import { DatabaseService } from 'src/app/services/database/database.service';
 export class DatabaseComponent implements OnInit {
 
   queryString: string = '';
-  constructor(private databaseService: DatabaseService) { }
+  constructor(public databaseService: DatabaseService) { }
 
   ngOnInit(): void {
     this.databaseService.getHighestDepartmentSalary();

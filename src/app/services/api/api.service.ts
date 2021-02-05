@@ -15,7 +15,6 @@ import { Result,  Args, ChosenArgs, ChosenResult} from './Response';
 export class ApiService {
 
   baseUrl = 'https://postman-echo.com/';
-  //defualtData: Observable<Data[]>;
   defualtData: Args[] = [];
   chosenData: ChosenArgs[] = [];
   data: Args;
@@ -23,12 +22,18 @@ export class ApiService {
   chosenDataSource: MatTableDataSource<ChosenArgs> = null;
   presentData: boolean = false;
   presentDefaultData: boolean = false;
-
+  // header = {
+  //   'Content-Type': 'application/json',
+  //        'Accept': 'application/json, text/plain,*/*',
+  //    'Access-Control-Allow-Origin': '*',
+  // }
+  // headers = new HttpHeaders(this.header);
+  
   constructor(private http: HttpClient) { }
 
  getApiDefault(){
   this.defualtData = [];
-  this.http.get<Result>(this.baseUrl+'get?foo1=bar1&foo2=bar2').subscribe((res: Result)=>{
+  this.http.get<Result>(this.baseUrl+'get?foo1=bar1&foo2=bar2' ).subscribe((res: Result)=>{
 
     this.defualtData.push(res.args);
     this.defaultDataSource = new MatTableDataSource(this.defualtData);
@@ -46,6 +51,4 @@ export class ApiService {
      this.presentData = true;
    });
  }
-
- 
 }

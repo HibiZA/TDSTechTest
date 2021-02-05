@@ -1,9 +1,11 @@
-<!-- <div *ngFor='let data of ApiService.defualtData'>
 
-   {{data.foo1}}
-   {{data.foo2}}
-</div> -->
-
+<p style="margin-left:20px; margin-top:20px">
+  To view the API response click on default.
+  <br>On the right, enter your Name and Surname to view the API Response.
+  <br>If you are having issues (nothing is showing),
+  <br>download the 'Allow CORS' extension for Chrome:
+  <br> <a style = "color: ivory;" target="_blank" href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en">Allow CORS</a>
+</p>
 <mat-grid-list cols="2" rowHeight="2:1" style="top: 20px;">
     <mat-grid-tile>
         <mat-grid-tile-header style="background-color: inherit;">
@@ -26,8 +28,9 @@
             
                 <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
               <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
-            
+              
             </table>
+           
             </div>
     </mat-grid-tile>
     <mat-grid-tile>
@@ -63,7 +66,6 @@
         </table>
         </div>
 
-
     </mat-grid-tile>
-  
   </mat-grid-list>
+  

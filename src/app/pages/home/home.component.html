@@ -2,13 +2,14 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>TDS Tech Test</span>
+    <span>TDS Tech Test
+    </span>
     <span class="spacer"></span>
 </mat-toolbar>
 
 
 <mat-drawer-container class="sidenav-container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-drawer #drawer class="sidenav"  opened mode="side">
       <p>
         <button mat-flat-button aria-label="Example icon-button with menu icon" (click)='navToHome(); drawer.toggle()'>
           <mat-icon aria-hidden="false" aria-label="Example icon-button with menu icon">home</mat-icon>
@@ -35,24 +36,18 @@
   </h1>
   <h2 >
     This is my solution to the TDS Tech Test.
-  </h2>
-  <h2 >
-    Head over to the Menu to view the solutions.
+    <br>Head over to the Menu to view the solutions.
   </h2>
   <p >
     The solutions are setup into different sections:
-    API Endpoint & Database.
+   <br>1) API Endpoint - Question 1
+   <br>2) Database - Question 2
+   <br>
+   <br>The Database default Query is the answer to question 2.
+   <br>The Source Code is linked below:
+   <br><a style = "color: ivory;" target="_blank" href="https://github.com/HibiZA/TDSTechTest">GitHub</a>
   </p>
-  <p>
-    Enter your Name & Surname to see the results from the API.
-  </p>
-  <p>
-    The Database default Query is the answer to question 2.
-  </p>
-  <p>
-    The Source Code is linked below:
-  </p>
-  <a style = "color: ivory;" target="_blank" href="https://github.com/HibiZA/TDSTechTest">GitHub</a>
+  <img src="https://camo.githubusercontent.com/63371d36886ee658f5a97401f393e1ab1684b2fd3de674b8f5efc7d410b2a3d0/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f57556c706c634d704f43456d5447427442572f67697068792e676966">
 </div>
   
   </mat-drawer-container>

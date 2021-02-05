@@ -1,0 +1,12 @@
+# [START runtime]
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: dist/TDSTechTest/index.html
+  upload: dist/TDSTechTest/index.html
+- url: /
+  static_dir: dist/TDSTechTest
+# [END runtime]
